@@ -32,7 +32,7 @@ public class Login extends HttpServlet {
 			
 			out.println("<html><body>");
 			out.println("ERRO");
-			out.println("<form action='/Projeto1/index.html' form method='get'>");
+			out.println("<form action='/Projeto1/Login.html' form method='get'>");
 			out.println("<input type='submit' value='Voltar'>");
 			out.println("</form>");
 			out.println("</body></html>");
@@ -40,7 +40,7 @@ public class Login extends HttpServlet {
 		else {
 			out.println("<html><body>");
 			out.println("Bem vindo: "+ daoList.get(0).getName());
-			out.println("<form action='/Projeto1/index.html' form method='get'>");
+			out.println("<form action='/Projeto1/Login.html' form method='get'>");
 			out.println("<input type='submit' value='Voltar'>");
 			out.println("</form>");
 			out.println("<form action='/Projeto1/VisualizaNotas.jsp' form method='get'>");

@@ -2,6 +2,7 @@
 <html>
 <head>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="VisualizaNotas.css">
 </head>
 <body>
 <div class="container">
@@ -20,16 +21,16 @@ List<Note> notes = dao.getNotes();
 for (Note note : notes) {
 %>
   <div class="card">
-    <h3 class="title"><% note.getName(); %></h3>
+  	<div class="row">
+  		<h3 class="title"><%=note.getName()%></h3>
+  	</div>
+    <h4 class="label"><%=note.getLabel()%></h4>
     <div class="bar">
       <div class="emptybar"></div>
       <div class="filledbar"></div>
     </div>
-    <div class="circle">
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-      <circle class="stroke" cx="60" cy="60" r="50"/>
-    </svg>
-    </div>
+    <h5 class="text"><%=note.getText()%></h5>
+    
   </div>
 <% } %>
 </div>

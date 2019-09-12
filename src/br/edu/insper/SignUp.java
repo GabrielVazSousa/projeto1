@@ -30,9 +30,7 @@ public class SignUp extends HttpServlet {
 			var result = dao.adiciona(user);
 			PrintWriter out = response.getWriter();
 			if (result == 0) {
-				 out.println("<html><body>");
-				 out.println("Usuário: " + user.getName()+" adicionado com sucesso");
-				 out.println("</body></html>");
+				 response.sendRedirect("/Projeto1/Login.html");
 				 dao.close();
 			}else if(result == 1) {
 				 out.println("<html><body>");
